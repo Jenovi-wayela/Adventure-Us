@@ -38,7 +38,7 @@
 
 
 <%= link_to 'Sign up', new_user_registration_path %>
-<%= link_to 'Create listing', experiences_path %>
+<%= link_to 'Create listing', new_experience_path %>
 
 
 <%# <%= link_to 'Sign up', experiences_path %>
@@ -47,4 +47,3 @@
   <!-- Experiences for the selected category will be displayed here -->
   <%= render partial: "experiences", locals: { experiences: @experiences, category: params[:category] } %>
 <%# </div>  %>
-
