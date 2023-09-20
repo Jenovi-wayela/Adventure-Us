@@ -1,0 +1,11 @@
+<%# <h1>Categories#show</h1>
+<p>Find me in app/views/categories/show.html.erb</p> %>
+<h1><%= @category.name %> Experiences</h1>
+<ul>
+  <% @experiences.each do |experience| %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/2372977/pexels-photo-2372977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
+    Arts and Culture
+  </div>
+    <li><%= link_to experience.title, experience_path(experience) %></li>
+  <% end %>
+</ul>

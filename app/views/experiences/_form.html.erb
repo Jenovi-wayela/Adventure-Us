@@ -1,0 +1,31 @@
+<%= simple_form_for(@experience) do |f| %>
+  <div class="row">
+    <div class="col-md-12">
+      <%= f.input :title, required: true %>
+    </div>
+    <div class="col-md-12">
+      <%= f.input :description, required: true %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <%= f.input :date, required: true, as: :date %>
+    </div>
+    <div class="col-md-12">
+      <%= f.input :location, required: true %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= f.input :capacity, required: true, as: :integer, placeholder: 'Select or type Capacity' %>
+    </div>
+    <div class="col-md-12">
+      <%= f.input :price, required: true, as: :integer, placeholder: 'Select or type Price' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, 'Create Experience' %>
+  </div>
+<% end %>

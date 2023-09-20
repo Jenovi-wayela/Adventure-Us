@@ -1,0 +1,16 @@
+.experiences-container {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  a {
+      text-decoration: none;
+  }
+}
+
+.experience-card {
+  border: 1px solid black;
+  // margin: 20px 0px;
+  text-decoration: none;
+  padding: 10px;
+}
