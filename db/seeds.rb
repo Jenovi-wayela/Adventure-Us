@@ -38,7 +38,7 @@ ex1 = Experience.create!(
                    location: "New York City, NY",
                    capacity: 20,
                    price: 100.0,
-                   user: User.all.sample,
+                   user: User.first,
                   category: Category.all.sample)
 
 Experience.create!(
@@ -48,7 +48,7 @@ Experience.create!(
                   location: "Los Angeles, CA",
                   capacity: 15,
                   price: 50.0,
-                  user: User.all.sample,
+                  user: User.first,
                 category: Category.all.sample)
 
 Experience.create!(
@@ -58,7 +58,7 @@ Experience.create!(
                    location: "San Francisco, CA",
                    capacity: 15,
                    price: 65.0,
-                   user: User.all.sample,
+                   user: User.first,
                   category: Category.all.sample)
 
 Experience.create!(

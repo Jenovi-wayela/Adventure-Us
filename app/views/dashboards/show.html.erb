@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row justify-content-start">
+        <div class="col-4">
+            <h1>Dashboard</h1>
+            <h3>Your Experiences</h3>
+            <ul>
+                <% @listings.each do |listing| %>
+                    <li>Title: <%= listing.title %></li>
+                    <li>Description: <%= listing.description %></li>
+                    <li>Date: <%= listing.date.strftime('%B %d, %Y') %></li>
+                    <li>Location: <%= listing.location %></li>
+                    <li>Capacity: <%= listing.capacity %></li>
+                    <li>Price: R<%= listing.price %></li>
+                <% end %>
+            </ul>
+            <h3>Your Bookings</h3>
+            <ul>
+                <% @bookings.each do |booking| %>
+                    <li><%= booking.experience.title %> Status: <%= booking.status %></li>
+                <% end %>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

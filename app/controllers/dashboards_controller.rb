@@ -1,5 +1,5 @@
 class DashboardsController < ApplicationController
-  def index
+  def show
     @bookings = current_user.bookings # Load the user's bookings
     @listings = current_user.experiences # Load the user's listings (experiences)
   end
