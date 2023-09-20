@@ -1,14 +1,9 @@
 <h1>ADVENTURE US</h1>
 
-<%# <div class="category-list">
-  <ul>
-    <% @categories.each do |category| %>
-      <%# <li>
-        <%= link_to category, experiences_path(category: category) %>
-      <%# </li> %>
-    <%# <% end %>
-  <%# </ul>
-</div> %>
+<div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
 <div class="cards">
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/1537635/pexels-photo-1537635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
