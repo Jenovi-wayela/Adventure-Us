@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root to: "experiences#index"
   get '/dashboard', to: 'dashboards#show', as: :dashboard
   get '/search', to: 'experiences#show', as: :search
