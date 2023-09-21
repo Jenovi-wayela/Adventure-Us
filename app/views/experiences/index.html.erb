@@ -1,39 +1,23 @@
-<h1>ADVENTURE US</h1>
+<h1>ADVENTURE-US</h1>
 
 
-<div class="cards">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/1537635/pexels-photo-1537635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
-    Eating
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/4099305/pexels-photo-4099305.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
-    Outdoors
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/3172566/pexels-photo-3172566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
-    Night Life
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/10740862/pexels-photo-10740862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
-    Safari
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/2372977/pexels-photo-2372977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
-    Arts and Culture
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/17087507/pexels-photo-17087507/free-photo-of-tourists-with-a-tour-guide.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
-    Tours
-  </div>
+<div class="category-cards">
+  <% @categories.each do |category| %>
+    <%= link_to category_path(category) do %>
+      <div class="category-card" 
+        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= category.url %>)">
+        <%= category.name%>
+      </div>
+    <% end %>
+  <% end %>
 </div>
 
-
 <%= link_to 'Sign up', new_user_registration_path %>
-<%= link_to 'Create listing', new_experience_path %>
+<%= link_to 'Create listing', experiences_path %>
+
 
 
 <%# <%= link_to 'Sign up', experiences_path %>
-=======
 <%# <div class="experiences-list">
   <!-- Experiences for the selected category will be displayed here -->
   <%= render partial: "experiences", locals: { experiences: @experiences, category: params[:category] } %>
