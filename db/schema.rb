@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema[7.0].define(version: 2023_09_21_141314) do
-
+ActiveRecord::Schema[7.0].define(version: 2023_09_21_151339) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -78,6 +76,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_21_141314) do
     t.float "longitude"
     t.index ["category_id"], name: "index_experiences_on_category_id"
     t.index ["user_id"], name: "index_experiences_on_user_id"
+  end
+
+  create_table "pg_search_documents", force: :cascade do |t|
+    t.text "content"
+    t.string "searchable_type"
+    t.bigint "searchable_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["searchable_type", "searchable_id"], name: "index_pg_search_documents_on_searchable"
   end
 
   create_table "users", force: :cascade do |t|
