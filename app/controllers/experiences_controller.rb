@@ -9,6 +9,14 @@ class ExperiencesController < ApplicationController
     @experience = Experience.new
   end
 
+  def search
+    if params[:query].present?
+      @results = Experience.search_by_experience(params[:query])
+    else
+      @results = Experience.all
+    end
+  end
+
   def show
     @experience = Experience.find(params[:id])
     @booking = Booking.new
@@ -30,7 +38,6 @@ class ExperiencesController < ApplicationController
       @experience.picture = '/app/assets/images/default experience.jpg'
     end
 
-
     if @experience.save
       redirect_to @experience, notice: 'Experience was successfully created.'
     else
@@ -43,5 +50,4 @@ class ExperiencesController < ApplicationController
   def experience_params
     params.require(:experience).permit(:title, :description, :date, :location, :capacity, :price)
   end
-
 end
