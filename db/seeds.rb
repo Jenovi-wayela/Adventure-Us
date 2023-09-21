@@ -33,16 +33,8 @@ eating = Category.create!(name: "Eating")
 outdoors = Category.create!(name: "Outdoors")
 night_life = Category.create!(name: "Night Lift")
 safari = Category.create!(name: "Safari")
-arts_and_cultue = Category.create!(name: "Arts and Culture")
+arts_and_culture = Category.create!(name: "Arts and Culture")
 tours = Category.create!(name: "Tours")
-
-
-eating_category = Category.find_by(name: "Eating")
-outdoors_category = Category.find_by(name: "Outdoors")
-night_life_category = Category.find_by(name: "Night Life")
-safari_category = Category.find_by(name: "Safari")
-arts_and_cultue_category = Category.find_by(name: "Arts and Culture")
-tours_category = Category.find_by(name: "Tours")
 
 ex1 = Experience.create!(
                    title: "Gourmet Dinner",
@@ -52,7 +44,7 @@ ex1 = Experience.create!(
                    capacity: 20,
                    price: 100.0,
                    user: User.first,
-                  category: eating_category )
+                  category: eating )
 
 Experience.create!(
                   title: "Street Food Adventure",
@@ -62,7 +54,7 @@ Experience.create!(
                   capacity: 15,
                   price: 50.0,
                   user: User.first,
-                category: eating_category )
+                category: eating )
 
 Experience.create!(
                    title: "Vegan Food Tasting",
@@ -72,7 +64,7 @@ Experience.create!(
                    capacity: 15,
                    price: 65.0,
                    user: User.first,
-                  category: eating_category )
+                  category: eating )
 
 Experience.create!(
                   title: "Farm-to-Table Dinner",
@@ -82,7 +74,7 @@ Experience.create!(
                   capacity: 12,
                   price: 90.0,
                   user: User.all.sample,
-                category: eating_category )
+                category: eating )
 
 Experience.create!(
                   title: "Farm-to-Table Dinner",
@@ -92,7 +84,7 @@ Experience.create!(
                   capacity: 12,
                   price: 90.0,
                   user: User.all.sample,
-                category: eating_category )
+                category: eating )
 
 Experience.create!(
                     title: "Hiking Expedition",
@@ -102,7 +94,7 @@ Experience.create!(
                     capacity: 10,
                     price: 75.0,
                     user: User.all.sample,
-                  category: outdoors_category)
+                  category: outdoors)
 
 Experience.create!(
                   title: "Beach Picnic",
@@ -112,7 +104,7 @@ Experience.create!(
                   capacity: 30,
                   price: 40.0,
                   user: User.all.sample,
-                category: outdoors_category)
+                category: outdoors)
 
 Experience.create!(
                   title: "Camping Adventure",
@@ -122,7 +114,7 @@ Experience.create!(
                   capacity: 8,
                   price: 120.0,
                   user: User.all.sample,
-                category: outdoors_category)
+                category: outdoors)
 
 Experience.create!(
                   title: "Mountain Biking Excursion",
@@ -132,7 +124,7 @@ Experience.create!(
                   capacity: 10,
                   price: 70.0,
                   user: User.all.sample,
-                category: outdoors_category)
+                category: outdoors)
 
 Experience.create!(
                   title: "VIP Nightclub Access",
@@ -142,7 +134,7 @@ Experience.create!(
                   capacity: 50,
                   price: 150.0,
                   user: User.all.sample,
-                category: night_life_category)
+                category: night_life)
 
 Experience.create!(
                   title: "Live Music Show",
@@ -152,7 +144,7 @@ Experience.create!(
                   capacity: 25,
                   price: 60.0,
                   user: User.all.sample,
-                category: night_life_category)
+                category: night_life)
 
 Experience.create!(
                   title: "Cocktail Mixology Class",
@@ -162,7 +154,7 @@ Experience.create!(
                   capacity: 20,
                   price: 55.0,
                   user: User.all.sample,
-                category: night_life_category)
+                category: night_life)
 
 Experience.create!(
                   title: "Comedy Club Night",
@@ -172,7 +164,7 @@ Experience.create!(
                   capacity: 30,
                   price: 40.0,
                   user: User.all.sample,
-                category: night_life_category)
+                category: night_life)
 
 
 Experience.create!(
@@ -183,7 +175,7 @@ Experience.create!(
                   capacity: 12,
                   price: 200.0,
                   user: User.all.sample,
-                category: safari_category)
+                category: safari)
 
 Experience.create!(
                   title: "Rainforest Adventure",
@@ -193,7 +185,7 @@ Experience.create!(
                   capacity: 8,
                   price: 180.0,
                   user: User.all.sample,
-                category: safari_category)
+                category: safari)
 
 Experience.create!(
                   title: "Savannah Jeep Safari",
@@ -203,7 +195,7 @@ Experience.create!(
                   capacity: 6,
                   price: 250.0,
                   user: User.all.sample,
-                category: safari_category)
+                category: safari)
 
 Experience.create!(
                   title: "Wildlife Photography Tour",
@@ -213,7 +205,7 @@ Experience.create!(
                   capacity: 10,
                   price: 180.0,
                   user: User.all.sample,
-                category: safari_category)
+                category: safari)
 
 Experience.create!(
                   title: "Art Gallery Tour",
@@ -223,7 +215,7 @@ Experience.create!(
                   capacity: 15,
                   price: 70.0,
                   user: User.all.sample,
-                category: arts_and_cultue_category)
+                category: arts_and_culture)
 
 Experience.create!(
                   title: "Historical Museum Visit",
@@ -233,7 +225,7 @@ Experience.create!(
                   capacity: 20,
                   price: 55.0,
                   user: User.all.sample,
-                category: arts_and_cultue_category)
+                category: arts_and_culture)
 
 Experience.create!(
                   title: "Opera Night at the Theater",
@@ -243,7 +235,7 @@ Experience.create!(
                   capacity: 18,
                   price: 75.0,
                   user: User.all.sample,
-                category: arts_and_cultue_category)
+                category: arts_and_culture)
 
 Experience.create!(
                   title: "Ancient Ruins Tour",
@@ -253,7 +245,7 @@ Experience.create!(
                   capacity: 22,
                   price: 65.0,
                   user: User.all.sample,
-                category: tours_category)
+                category: tours)
 
 Experience.create!(
                   title: "City Sightseeing Tour",
@@ -263,7 +255,7 @@ Experience.create!(
                   capacity: 30,
                   price: 90.0,
                   user: User.all.sample,
-                category: tours_category)
+                category: tours)
 
 Experience.create!(
                   title: "Wine Tasting Tour",
@@ -274,7 +266,7 @@ Experience.create!(
                   capacity: 15,
                   price: 120.0,
                   user: User.all.sample,
-                category: tours_category)
+                category: tours)
 
 Experience.create!(
                   title: "Historic Walking Tour",
@@ -284,7 +276,7 @@ Experience.create!(
                   capacity: 15,
                   price: 80.0,
                   user: User.all.sample,
-                category: tours_category)
+                category: tours)
 
 Experience.create!(
                   title: "Bike and Brews Tour",
@@ -294,4 +286,4 @@ Experience.create!(
                   capacity: 12,
                   price: 95.0,
                   user: User.all.sample,
-                category: tours_category)
+                category: tours)

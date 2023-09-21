@@ -3,30 +3,8 @@
 <h1><%= @category.name %> Experiences</h1>
 <ul>
   <% @experiences.each do |experience| %>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)">
-    <%= @eating_category.name %>
-  </div>
- 
-  <%# <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/4099305/pexels-photo-4099305.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)"> %>
-    <%# <%= @outdoors_category.name %>
-  <%# </div> %>
-
-  <%# <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/3172566/pexels-photo-3172566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
-    <%= @category.name %>
-  <%# </div> %> 
-
-  <%# <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/10740862/pexels-photo-10740862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
-    <%= @category.name %>
-  <%# </div> %>
-
-  <%# <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/2372977/pexels-photo-2372977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
-    <%= @category.name %>
-  <%# </div> %>
-
-  <%# <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/17087507/pexels-photo-17087507/free-photo-of-tourists-with-a-tour-guide.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
-    <%= @category.name %>
-  <%# </div> %>
-
-    <li><%= link_to experience.title, experience_path(experience, category_id: @category.id) %></li>
+    <div class="experience-card">
+      <%= link_to experience.title, experience_path(experience) %>
+    </div>
   <% end %>
 </ul>
