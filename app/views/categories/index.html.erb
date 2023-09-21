@@ -4,7 +4,8 @@
 <div class="category-cards">
   <% @categories.each do |category| %>
     <%= link_to category_path(category) do %>
-      <div class="category-card">
+      <div class="category-card" 
+        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(' <% img_tag @category.url, height: 300, crop: :fill %>')">
         <%= category.name%>
       </div>
     <% end %>
