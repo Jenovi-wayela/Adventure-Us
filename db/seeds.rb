@@ -32,13 +32,13 @@ end
 outdoors = Category.create!(name: "Great Outdoors")
 
 ex1 = Experience.create!(
-                   title: "Gourmet Dinner",
-                   description: "Indulge in a delicious gourmet dinner experience.",
-                   date: Date.today + 10,
-                   location: "New York City, NY",
-                   capacity: 20,
-                   price: 100.0,
-                   user: User.first,
+                  title: "Gourmet Dinner",
+                  description: "Indulge in a delicious gourmet dinner experience.",
+                  date: Date.today + 10,
+                  location: "New York City, NY",
+                  capacity: 20,
+                  price: 100.0,
+                  user: User.first,
                   category: Category.all.sample)
 
 Experience.create!(
@@ -52,13 +52,13 @@ Experience.create!(
                 category: Category.all.sample)
 
 Experience.create!(
-                   title: "Vegan Food Tasting",
-                   description: "Discover the flavors of vegan cuisine.",
-                   date: Date.today + 18,
-                   location: "San Francisco, CA",
-                   capacity: 15,
-                   price: 65.0,
-                   user: User.first,
+                  title: "Vegan Food Tasting",
+                  description: "Discover the flavors of vegan cuisine.",
+                  date: Date.today + 18,
+                  location: "San Francisco, CA",
+                  capacity: 15,
+                  price: 65.0,
+                  user: User.first,
                   category: Category.all.sample)
 
 Experience.create!(
