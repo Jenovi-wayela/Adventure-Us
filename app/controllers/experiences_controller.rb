@@ -8,6 +8,7 @@ class ExperiencesController < ApplicationController
         lat: experience.latitude,
         lng: experience.longitude
       }
+    end
   end
 
   def new
@@ -33,4 +34,5 @@ class ExperiencesController < ApplicationController
   def experience_params
     params.require(:experience).permit(:title, :description, :date, :location, :capacity, :price)
   end
+
 end
