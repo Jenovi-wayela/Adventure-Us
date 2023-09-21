@@ -29,17 +29,23 @@ User.create(
   )
 end
 
-outdoors = Category.create!(name: "Great Outdoors")
+eating = Category.create!(name: "Eating", url: "https://images.pexels.com/photos/1537635/pexels-photo-1537635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+outdoors = Category.create!(name: "Outdoors", url: "https://images.pexels.com/photos/4099305/pexels-photo-4099305.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" )
+night_life = Category.create!(name: "Night Life", url: "https://images.pexels.com/photos/3172566/pexels-photo-3172566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+safari = Category.create!(name: "Safari", url: "https://images.pexels.com/photos/10740862/pexels-photo-10740862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+arts_and_culture = Category.create!(name: "Arts and Culture", url: "https://images.pexels.com/photos/2372977/pexels-photo-2372977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+tours = Category.create!(name: "Tours", url: "https://images.pexels.com/photos/17087507/pexels-photo-17087507/free-photo-of-tourists-with-a-tour-guide.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
 
 ex1 = Experience.create!(
-                        title: "Gourmet Dinner",
-                        description: "Indulge in a delicious gourmet dinner experience.",
-                        date: Date.today + 10,
-                        location: "New York City, NY",
-                        capacity: 20,
-                        price: 100.0,
-                        user: User.first,
-                        category: Category.all.sample)
+                   title: "Gourmet Dinner",
+                   description: "Indulge in a delicious gourmet dinner experience.",
+                   date: Date.today + 10,
+                   location: "New York City, NY",
+                   capacity: 20,
+                   price: 100.0,
+                   user: User.first,
+                  category: eating )
+>>>>>>> master
 
 Experience.create!(
                   title: "Street Food Adventure",
@@ -49,27 +55,18 @@ Experience.create!(
                   capacity: 15,
                   price: 50.0,
                   user: User.first,
-                  category: Category.all.sample)
+                category: eating )
 
 Experience.create!(
-                  title: "Vegan Food Tasting",
-                  description: "Discover the flavors of vegan cuisine.",
-                  date: Date.today + 18,
-                  location: "San Francisco, CA",
-                  capacity: 15,
-                  price: 65.0,
-                  user: User.first,
-                  category: Category.all.sample)
-
-Experience.create!(
-                  title: "Farm-to-Table Dinner",
-                  description: "Savor locally sourced ingredients in a farm setting.",
-                  date: Date.today + 22,
-                  location: "Portland, OR",
-                  capacity: 12,
-                  price: 90.0,
-                  user: User.all.sample,
-                  category: Category.all.sample)
+                   title: "Vegan Food Tasting",
+                   description: "Discover the flavors of vegan cuisine.",
+                   date: Date.today + 18,
+                   location: "San Francisco, CA",
+                   capacity: 15,
+                   price: 65.0,
+                   user: User.first,
+                  category: eating )
+>>>>>>> master
 
 Experience.create!(
                   title: "Farm-to-Table Dinner",
@@ -79,17 +76,27 @@ Experience.create!(
                   capacity: 12,
                   price: 90.0,
                   user: User.all.sample,
-                  category: Category.all.sample)
+                category: eating )
 
 Experience.create!(
-                  title: "Hiking Expedition",
-                  description: "Embark on an exciting hiking adventure.",
-                  date: Date.today + 20,
-                  location: "Denver, CO",
-                  capacity: 10,
-                  price: 75.0,
+                  title: "Farm-to-Table Dinner",
+                  description: "Savor locally sourced ingredients in a farm setting.",
+                  date: Date.today + 22,
+                  location: "Portland, OR",
+                  capacity: 12,
+                  price: 90.0,
                   user: User.all.sample,
-                  category: Category.all.sample)
+                category: eating )
+
+Experience.create!(
+                    title: "Hiking Expedition",
+                    description: "Embark on an exciting hiking adventure.",
+                    date: Date.today + 20,
+                    location: "Denver, CO",
+                    capacity: 10,
+                    price: 75.0,
+                    user: User.all.sample,
+                  category: outdoors)
 
 Experience.create!(
                   title: "Beach Picnic",
@@ -99,7 +106,7 @@ Experience.create!(
                   capacity: 30,
                   price: 40.0,
                   user: User.all.sample,
-                  category: Category.all.sample)
+                category: outdoors)
 
 Experience.create!(
                   title: "Camping Adventure",
@@ -109,7 +116,7 @@ Experience.create!(
                   capacity: 8,
                   price: 120.0,
                   user: User.all.sample,
-                  category: Category.all.sample)
+                category: outdoors)
 
 Experience.create!(
                   title: "Mountain Biking Excursion",
@@ -119,7 +126,7 @@ Experience.create!(
                   capacity: 10,
                   price: 70.0,
                   user: User.all.sample,
-                  category: Category.all.sample)
+                category: outdoors)
 
 Experience.create!(
                   title: "VIP Nightclub Access",
@@ -129,7 +136,7 @@ Experience.create!(
                   capacity: 50,
                   price: 150.0,
                   user: User.all.sample,
-                  category: Category.all.sample)
+                category: night_life)
 
 Experience.create!(
                   title: "Live Music Show",
@@ -139,7 +146,7 @@ Experience.create!(
                   capacity: 25,
                   price: 60.0,
                   user: User.all.sample,
-                  category: Category.all.sample)
+                category: night_life)
 
 Experience.create!(
                   title: "Cocktail Mixology Class",
@@ -149,7 +156,7 @@ Experience.create!(
                   capacity: 20,
                   price: 55.0,
                   user: User.all.sample,
-                  category: Category.all.sample)
+                category: night_life)
 
 Experience.create!(
                   title: "Comedy Club Night",
@@ -159,7 +166,7 @@ Experience.create!(
                   capacity: 30,
                   price: 40.0,
                   user: User.all.sample,
-                  category: Category.all.sample)
+                category: night_life)
 
 
 Experience.create!(
@@ -170,7 +177,7 @@ Experience.create!(
                   capacity: 12,
                   price: 200.0,
                   user: User.all.sample,
-                  category: Category.all.sample)
+                category: safari)
 
 Experience.create!(
                   title: "Rainforest Adventure",
@@ -180,7 +187,7 @@ Experience.create!(
                   capacity: 8,
                   price: 180.0,
                   user: User.all.sample,
-                  category: Category.all.sample)
+                category: safari)
 
 Experience.create!(
                   title: "Savannah Jeep Safari",
@@ -190,7 +197,7 @@ Experience.create!(
                   capacity: 6,
                   price: 250.0,
                   user: User.all.sample,
-                  category: Category.all.sample)
+                category: safari)
 
 Experience.create!(
                   title: "Wildlife Photography Tour",
@@ -200,7 +207,7 @@ Experience.create!(
                   capacity: 10,
                   price: 180.0,
                   user: User.all.sample,
-                  category: Category.all.sample)
+                category: safari)
 
 Experience.create!(
                   title: "Art Gallery Tour",
@@ -210,7 +217,7 @@ Experience.create!(
                   capacity: 15,
                   price: 70.0,
                   user: User.all.sample,
-                  category: Category.all.sample)
+                category: arts_and_culture)
 
 Experience.create!(
                   title: "Historical Museum Visit",
@@ -220,7 +227,7 @@ Experience.create!(
                   capacity: 20,
                   price: 55.0,
                   user: User.all.sample,
-                  category: Category.all.sample)
+                category: arts_and_culture)
 
 Experience.create!(
                   title: "Opera Night at the Theater",
@@ -230,7 +237,7 @@ Experience.create!(
                   capacity: 18,
                   price: 75.0,
                   user: User.all.sample,
-                  category: Category.all.sample)
+                category: arts_and_culture)
 
 Experience.create!(
                   title: "Ancient Ruins Tour",
@@ -240,7 +247,7 @@ Experience.create!(
                   capacity: 22,
                   price: 65.0,
                   user: User.all.sample,
-                  category: Category.all.sample)
+                category: tours)
 
 Experience.create!(
                   title: "City Sightseeing Tour",
@@ -250,7 +257,7 @@ Experience.create!(
                   capacity: 30,
                   price: 90.0,
                   user: User.all.sample,
-                  category: Category.all.sample)
+                category: tours)
 
 Experience.create!(
                   title: "Wine Tasting Tour",
@@ -261,7 +268,7 @@ Experience.create!(
                   capacity: 15,
                   price: 120.0,
                   user: User.all.sample,
-                  category: Category.all.sample)
+                category: tours)
 
 Experience.create!(
                   title: "Historic Walking Tour",
@@ -271,7 +278,7 @@ Experience.create!(
                   capacity: 15,
                   price: 80.0,
                   user: User.all.sample,
-                  category: Category.all.sample)
+                category: tours)
 
 Experience.create!(
                   title: "Bike and Brews Tour",
@@ -281,4 +288,4 @@ Experience.create!(
                   capacity: 12,
                   price: 95.0,
                   user: User.all.sample,
-                  category: Category.all.sample)
+                category: tours)
