@@ -18,6 +18,15 @@ class ExperiencesController < ApplicationController
   def show
     @experience = Experience.find(params[:id])
     @booking = Booking.new
+
+    @markers = @experience.geocoded.map do |experience|
+      {
+        lat: experience.latitude,
+        lng: experience.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: { experience: experience }),
+        marker_html: render_to_string(partial: "marker")
+      }
+    end
   end
 
   def create

@@ -15,7 +15,11 @@
       <%= f.input :date, required: true, as: :date %>
     </div>
     <div class="col-md-12">
-      <%= f.input :location, required: true %>
+      <%= f.input :location, required: true,
+        input_html: {data: {location_autocomplete_target: "location"}, class: "d-none"},
+        wrapper_html: {data: {controller: "location-autocomplete", location_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}
+      %>
+
     </div>
   </div>
 
