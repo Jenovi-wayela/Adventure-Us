@@ -30,8 +30,8 @@ User.create(
 end
 
 eating = Category.create!(name: "Eating", url: "https://images.pexels.com/photos/1537635/pexels-photo-1537635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
-outdoors = Category.create!(name: "Outdoors", url: "(https://images.pexels.com/photos/4099305/pexels-photo-4099305.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)" )
-night_life = Category.create!(name: "Night Lift", url: "https://images.pexels.com/photos/3172566/pexels-photo-3172566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+outdoors = Category.create!(name: "Outdoors", url: "https://images.pexels.com/photos/4099305/pexels-photo-4099305.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" )
+night_life = Category.create!(name: "Night Life", url: "https://images.pexels.com/photos/3172566/pexels-photo-3172566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
 safari = Category.create!(name: "Safari", url: "https://images.pexels.com/photos/10740862/pexels-photo-10740862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
 arts_and_culture = Category.create!(name: "Arts and Culture", url: "https://images.pexels.com/photos/2372977/pexels-photo-2372977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
 tours = Category.create!(name: "Tours", url: "https://images.pexels.com/photos/17087507/pexels-photo-17087507/free-photo-of-tourists-with-a-tour-guide.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
