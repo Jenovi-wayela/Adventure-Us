@@ -25,6 +25,12 @@ class ExperiencesController < ApplicationController
 
   def create
     @experience = Experience.new(experience_params)
+    if params[:experience][:picture].present?
+    else
+      @experience.picture = '/app/assets/images/default experience.jpg'
+    end
+
+
     if @experience.save
       redirect_to @experience, notice: 'Experience was successfully created.'
     else
