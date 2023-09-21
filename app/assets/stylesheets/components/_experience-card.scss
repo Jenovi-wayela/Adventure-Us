@@ -1,0 +1,22 @@
+.experience-card {
+  overflow: hidden;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  font-style: bold;
+
+
+  .experience-info {
+    padding: 16px;
+    display: block;
+    justify-content: space-between;
+    align-items: flex-start;
+    // position: relative;
+    // position: absolute;
+    // right: 16px;
+    // top: -20px;
+    // width: 40px;
+  }
+
+
+}

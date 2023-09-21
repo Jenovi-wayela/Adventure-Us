@@ -1,15 +1,8 @@
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  padding: 30px;
-}
-
-.card-category {
+.booking-card {
   background-size: cover;
   background-position: center;
   height: 180px;
-  display: block;
+  display: flex;
   justify-content: center;
   align-items: center;
   color: white;
