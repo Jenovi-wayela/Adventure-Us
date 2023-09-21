@@ -13,10 +13,10 @@ class ExperiencesController < ApplicationController
     @experience = Experience.find(params[:id])
     @booking = Booking.new
 
-    @markers = @experience.geocoded.map do |experience|
+    @markers = @experience.geocode.map do |experience|
       {
-        lat: experience.latitude,
-        lng: experience.longitude,
+        lat: @experience.latitude,
+        lng: @experience.longitude,
         info_window_html: render_to_string(partial: "info_window", locals: { experience: experience }),
         marker_html: render_to_string(partial: "marker")
       }
