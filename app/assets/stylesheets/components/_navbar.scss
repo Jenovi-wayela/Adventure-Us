@@ -1,7 +1,7 @@
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: #f4b942;
-
+  background: #F4B942;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,6 +9,31 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 60px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
 }
 
+.container, .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 92%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-right: auto;
+  margin-left: auto;
+}
+h1 {
+  font-family: inherit;
+  font-style: bold;
+  font-weight: 300%;
+  margin-top: -15px;
+  margin-left: -688px;
+  margin-bottom: -19px;
+}
+img {
+
+}
