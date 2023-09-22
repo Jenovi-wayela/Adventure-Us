@@ -3,12 +3,35 @@ class ExperiencesController < ApplicationController
 
   def index
     @categories = Category.all
+    @results = search if params[:query].present?
   end
 
   def new
     @experience = Experience.new
     @category_names = Category.pluck(:name)
 
+  end
+
+  def create
+    @experience = Experience.new(experience_params)
+    if params[:experience][:picture].present?
+    else
+      @experience.picture = '/app/assets/images/default experience.jpg'
+    end
+
+    if @experience.save
+      redirect_to @experience, notice: 'Experience was successfully created.'
+    else
+      render :new
+    end
+  end
+
+  def search
+    if params[:query].present?
+      @results = Experience.search_by_experience(params[:query])
+    else
+      @results = Experience.all
+    end
   end
 
   def show
@@ -47,5 +70,4 @@ class ExperiencesController < ApplicationController
   def experience_params
     params.require(:experience).permit(:title, :description, :date, :location, :capacity, :price)
   end
-
 end

@@ -3,8 +3,8 @@ class Experience < ApplicationRecord
   belongs_to :category
   has_many_attached :photo
   has_many :bookings
+  has_many_attached :photo
   has_many :users, through: :bookings
-
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
 
@@ -16,6 +16,5 @@ class Experience < ApplicationRecord
     },
     using: {
       tsearch: { prefix: true }
-      }
-
+    }
 end
