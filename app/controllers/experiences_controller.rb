@@ -8,17 +8,28 @@ class ExperiencesController < ApplicationController
 
   def new
     @experience = Experience.new
+    @category_names = Category.pluck(:name, :id)
+
   end
+
 
   def create
     @experience = Experience.new(experience_params)
-    if params[:experience][:picture].present?
+    @experience.category_id = params[:experience][:category_id]
+    @experience.user_id = current_user.id
+
+    if params[:experience][:image].present?
     else
-      @experience.picture = '/app/assets/images/default experience.jpg'
+      @experience.image = '/app/assets/images/default experience.jpg'
     end
 
+<<<<<<< HEAD
     if @experience.save
       redirect_to dashboard, notice: 'Experience was successfully created.'
+=======
+    if @experience.save!
+      redirect_to dashboard_path, notice: 'Experience was successfully created.'
+>>>>>>> master
     else
       render :new
     end
@@ -35,6 +46,7 @@ class ExperiencesController < ApplicationController
   def show
     @experience = Experience.find(params[:id])
     @booking = Booking.new
+    @users = @experience.users
 
     @markers = @experience.geocode.map do |experience|
       {
@@ -50,6 +62,6 @@ class ExperiencesController < ApplicationController
   private
 
   def experience_params
-    params.require(:experience).permit(:title, :description, :date, :location, :capacity, :price)
+    params.require(:experience).permit(:title, :description, :date, :location, :capacity, :price, :image, :category_id)
   end
 end

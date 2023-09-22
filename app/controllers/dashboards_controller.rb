@@ -1,6 +1,6 @@
 class DashboardsController < ApplicationController
   def show
     @bookings = current_user.bookings # Load the user's bookings
-    @listings = current_user.experiences # Load the user's listings (experiences)
+    @listings = Experience.where(user_id: current_user.id) # Load the user's listings (experiences)
   end
 end

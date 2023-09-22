@@ -4,7 +4,7 @@
       <%= f.input :title, required: true %>
     </div>
     <div class="col-md-12">
-      <%= f.input :category, required: true %>
+      <%= f.input :category_id, as: :select, collection: @category_names, label: "Category", required: true %>
     </div>
     <div class="col-md-12">
       <%= f.input :description, required: true %>
@@ -34,7 +34,7 @@
 
   <div class="row">
     <div class="col-md-12">
-      <%= f.input :picture, as: :file %>
+      <%= f.input :image, as: :file %>
     </div>
   </div>
 
