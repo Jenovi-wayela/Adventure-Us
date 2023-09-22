@@ -1,20 +1,32 @@
-<div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
+<div class="container">
+  <div class="row">
+    <!-- Map Column (Left Side) -->
+    <div class="col-md-6">
+      <div class="map">
+        <div style="width: 100%; height: 600px;"
+          data-controller="map"
+          data-map-markers-value="<%= @markers.to_json %>"
+          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+          data-map-zoom-value="1">
+        </div>
+      </div>
+    </div>
 
-<div class="container" class="mx-auto" style="width: 500px;">
-  <h1><%= @experience.title %></h1>
-  <p><%= @experience.description %></p>
-  <p><strong>Price:</strong> $<%= @experience.price %></p>
-  <p><strong>Date:</strong> <%= @experience.date.strftime('%B %d, %Y') %></p>
-  <p><strong>Location:</strong> <%= @experience.location %></p>
-  <p><strong>Capacity:</strong> <%= @experience.capacity %></p>
+    <!-- Details Column (Right Side) -->
+    <div class="col-md-6">
+      <div class="container mx-auto" style="width: 500px;">
+        <h1><%= @experience.title %></h1>
+        <p><%= @experience.description %></p>
+        <p><strong>Price:</strong> $<%= @experience.price %></p>
+        <p><strong>Date:</strong> <%= @experience.date.strftime('%B %d, %Y') %></p>
+        <p><strong>Location:</strong> <%= @experience.location %></p>
+        <p><strong>Capacity:</strong> <%= @experience.capacity %></p>
 
-  <%= simple_form_for @booking, url: bookings_path do |f| %>
-    <%= f.hidden_field :experience_id, value: @experience.id %>
-    <%= f.button :submit, "Book Now", class: "btn btn-primary" %>
-  <% end %>
-
+        <%= simple_form_for @booking, url: bookings_path do |f| %>
+          <%= f.hidden_field :experience_id, value: @experience.id %>
+          <%= f.button :submit, "Book Now", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
