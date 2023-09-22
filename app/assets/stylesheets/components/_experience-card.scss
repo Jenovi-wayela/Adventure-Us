@@ -1,22 +1,66 @@
-.experience-card {
-  overflow: hidden;
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  font-style: bold;
+// .experience-card {
+//   overflow: hidden;
+//   background: white;
+//   border-radius: 20px;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   font-style: bold;
 
 
-  .experience-info {
-    padding: 16px;
-    display: block;
-    justify-content: space-between;
-    align-items: flex-start;
-    // position: relative;
-    // position: absolute;
-    // right: 16px;
-    // top: -20px;
-    // width: 40px;
-  }
+//   .experience-info {
+//     padding: 16px;
+//     display: block;
+//     justify-content: space-between;
+//     align-items: flex-start;
+//     // position: relative;
+//     // position: absolute;
+//     // right: 16px;
+//     // top: -20px;
+//     // width: 40px;
+//   }
 
 
-}
+// }
+
+// .card-trip {
+//   // overflow: hidden;
+//   background: white;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   border-radius: 20px;
+//   display: inline-block;
+//   margin-bottom: 20px;
+
+//   > img {
+//     height: 200px;
+//     width: 100%;
+//     object-fit: cover;
+//   }
+
+//   h2 {
+//     font-size: 16px;
+//     font-weight: bold;
+//     margin: 0;
+//     padding: 16px;
+//   }
+
+//   p {
+//     font-size: 12px;
+//     opacity: .7;
+//     margin: 0;
+//     padding: 0 16px 16px;
+//   }
+
+//   .card-trip-infos {
+//     padding: 16px;
+//     display: inline-block;
+//     justify-content: space-between;
+//     align-items: flex-end;
+//     position: relative;
+
+//     .card-trip-user {
+//       position: absolute;
+//       right: 16px;
+//       top: -20px;
+//       width: 40px;
+//     }
+//   }
+// }

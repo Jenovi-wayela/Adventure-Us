@@ -4,23 +4,24 @@
             <%# <h1>Dashboard</h1> %>
             <h3>Your Experiences</h3>
 
-                <% @listings.each do |listing| %>
-                    <div class= "experience-card">
-                        <div class= "experience-info">
-                          <div class="title-description">
-                            <%= listing.title %>
-                            Description: <%= listing.description %>
-                          </div>
-                        </div>
+              <% @listings.each do |listing| %>
+                  <div class= "d-flex justify-content-between">
+                      <div class= "experience-info">
+                        <div class="title-description">
+                        <h2> <%= listing.title %></h2>
+                        <p> Description: <%= listing.description %></p>
+                        <div class="card-trip-info">
                           Date: <%= listing.date.strftime('%B %d, %Y') %>
                           Location: <%= listing.location %>
                           Capacity: <%= listing.capacity %>
                           Price: R<%= listing.price %>
-                    </div>
-                <% end %>
-            </ul>
+                        </div>
+                      </div>
+                  </div>
+              <% end %>
+
             <div class="booking-card">
-              <h3>Your Bookings</h3>
+              <h3>Your Bookings</h3>  
               <ul>
                   <% @bookings.each do |booking| %>
                       <li><%= booking.experience.title %> Status: <%= booking.status %></li>

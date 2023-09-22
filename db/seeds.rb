@@ -45,7 +45,7 @@ ex1 = Experience.create!(
                    price: 100.0,
                    user: User.first,
                   category: eating )
->>>>>>> master
+
 
 Experience.create!(
                   title: "Street Food Adventure",
@@ -58,15 +58,15 @@ Experience.create!(
                 category: eating )
 
 Experience.create!(
-                   title: "Vegan Food Tasting",
-                   description: "Discover the flavors of vegan cuisine.",
-                   date: Date.today + 18,
-                   location: "San Francisco, CA",
-                   capacity: 15,
-                   price: 65.0,
-                   user: User.first,
-                  category: eating )
->>>>>>> master
+                  title: "Vegan Food Tasting",
+                  description: "Discover the flavors of vegan cuisine.",
+                  date: Date.today + 18,
+                  location: "San Francisco, CA",
+                  capacity: 15,
+                  price: 65.0,
+                  user: User.first,
+                category: eating )
+
 
 Experience.create!(
                   title: "Farm-to-Table Dinner",
