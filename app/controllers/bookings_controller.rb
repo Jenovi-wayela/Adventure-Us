@@ -8,7 +8,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(user: current_user, experience: @experience)
 
     if @booking.save
-      redirect_to dashboard_path, notice: "Booking pending."
+      redirect_to dashboard_path, notice: "Booking reserved."
     else
       render :new, alert: :unprocessable_entity
     end

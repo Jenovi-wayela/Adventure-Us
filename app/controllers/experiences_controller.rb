@@ -7,6 +7,8 @@ class ExperiencesController < ApplicationController
 
   def new
     @experience = Experience.new
+    @category_names = Category.pluck(:name)
+
   end
 
   def show
@@ -34,7 +36,7 @@ class ExperiencesController < ApplicationController
 
 
     if @experience.save
-      redirect_to @experience, notice: 'Experience was successfully created.'
+      redirect_to dashboard_path, notice: 'Experience was successfully created.'
     else
       render :new
     end

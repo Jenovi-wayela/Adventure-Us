@@ -4,7 +4,7 @@
             <h1>Dashboard</h1>
             <h3>Your Experiences</h3>         
                 <% @listings.each do |listing| %>
-                    <p>Title: <%= listing.title %></p>
+                    <li>Title: <%= listing.title %></li>
                     <p>Description: <%= listing.description %></p>
                     <p>Date: <%= listing.date.strftime('%B %d, %Y') %></p>
                     <p>Location: <%= listing.location %></p>
