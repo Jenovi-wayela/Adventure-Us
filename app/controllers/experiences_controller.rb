@@ -12,15 +12,18 @@ class ExperiencesController < ApplicationController
 
   end
 
+
   def create
     @experience = Experience.new(experience_params)
+    @experience.users << current_user
     if params[:experience][:picture].present?
     else
       @experience.picture = '/app/assets/images/default experience.jpg'
     end
 
+
     if @experience.save
-      redirect_to @experience, notice: 'Experience was successfully created.'
+      redirect_to dashboard_path, notice: 'Experience was successfully created.'
     else
       render :new
     end
@@ -49,21 +52,6 @@ class ExperiencesController < ApplicationController
     end
   end
 
-  def create
-    @experience = Experience.new(experience_params)
-    @experience.users << current_user
-    if params[:experience][:picture].present?
-    else
-      @experience.picture = '/app/assets/images/default experience.jpg'
-    end
-
-
-    if @experience.save
-      redirect_to dashboard_path, notice: 'Experience was successfully created.'
-    else
-      render :new
-    end
-  end
 
   private
 

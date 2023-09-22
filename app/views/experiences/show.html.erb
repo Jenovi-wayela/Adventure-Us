@@ -25,9 +25,7 @@
 
         <%= simple_form_for @booking, url: bookings_path do |f| %>
           <%= f.hidden_field :experience_id, value: @experience.id %>
-          <%= f.hidden_field :user_id, value: @current_user.id %>
-
-           
+          <%= f.hidden_field :user_id, value: @current_user.id %> 
           <%= f.button :submit, "Book Now", class: "btn btn-primary" %>
         <% end %>
       </div>
