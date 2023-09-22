@@ -7,11 +7,14 @@ class ExperiencesController < ApplicationController
 
   def new
     @experience = Experience.new
+    @category_names = Category.pluck(:name)
+
   end
 
   def show
     @experience = Experience.find(params[:id])
     @booking = Booking.new
+    @users = @experience.users
 
     @markers = @experience.geocode.map do |experience|
       {
@@ -25,6 +28,7 @@ class ExperiencesController < ApplicationController
 
   def create
     @experience = Experience.new(experience_params)
+    @experience.users << current_user
     if params[:experience][:picture].present?
     else
       @experience.picture = '/app/assets/images/default experience.jpg'
@@ -32,7 +36,7 @@ class ExperiencesController < ApplicationController
 
 
     if @experience.save
-      redirect_to @experience, notice: 'Experience was successfully created.'
+      redirect_to dashboard_path, notice: 'Experience was successfully created.'
     else
       render :new
     end
