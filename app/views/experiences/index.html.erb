@@ -1,14 +1,27 @@
 
-<h1>ADVENTURE-US</h1>
+<h1>ADVENTURE US</h1>
 
+<%= form_tag(search_path, method: "get", class: "search-form") do %>
+  <%= text_field_tag :query, params[:query], placeholder: "Search by title/category" %>
+  <%= submit_tag "Search", class: "btn btn-outline-secondary" %>
+<% end %>
 
+<% if @results.present? %>
+<% @results.each do |result| %>
+
+<%= result.title %>
+<% end %>
+
+<%else %>
 <div class="category-cards">
   <% @categories.each do |category| %>
     <%= link_to category_path(category) do %>
-      <div class="category-card" 
+      <div class="category-card"
         style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= category.url %>)">
         <%= category.name%>
       </div>
     <% end %>
   <% end %>
 </div>
+
+<% end %>

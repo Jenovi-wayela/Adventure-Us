@@ -1,8 +1,8 @@
 body {
-  position: relative;
   margin: 0;
   padding: 0;
 }
+
 .footer {
   background: #020202;
   display: flex;
@@ -12,24 +12,32 @@ body {
   padding: 0 50px;
   color: rgba(255, 255, 255, 0.7);
   font-size: 12px;
-  position: sticky;
-  bottom: auto;
+  position:fixed;
+  bottom: 0;
   width: 100%;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 1px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-  .footer-links {
-    display: flex;
-    align-items: center;
 
-    a {
-      color: rgb(255, 255, 255);
-      opacity: 0.6;
-      text-decoration: none;
-      font-size: 20px;
-      margin-right: 10px;
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center; // Center horizontally
+  height: 100%; // Ensure the container takes up the full height of its parent
 
-      &:hover {
-        opacity: 1;
-      }
+  a {
+    color: #a5ffb3;
+    opacity: 0.6;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 10px;
+
+    &:hover {
+      opacity: 1;
     }
   }
+

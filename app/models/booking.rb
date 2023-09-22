@@ -1,6 +1,6 @@
 class Booking < ApplicationRecord
-  belongs_to :experience
   belongs_to :user
+  belongs_to :experience
 
   enum status: {
     pending: 0,

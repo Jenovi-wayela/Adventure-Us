@@ -4,7 +4,8 @@
       <%= f.input :title, required: true %>
     </div>
     <div class="col-md-12">
-      <%= f.input :category, required: true %>
+      <%= f.input :category, as: :select, collection: @category_names, label: "Category", required: true %>
+      <%# <%= f.input :status, as: :select, collection: Booking.statuses.keys, label: 'Status' %>
     </div>
     <div class="col-md-12">
       <%= f.input :description, required: true %>
@@ -42,7 +43,3 @@
     <%= f.button :submit, 'Create Experience' %>
   </div>
 <% end %>
-
-
-
-
