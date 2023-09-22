@@ -12,6 +12,7 @@ class ExperiencesController < ApplicationController
   def show
     @experience = Experience.find(params[:id])
     @booking = Booking.new
+    @users = @experience.users
 
     @markers = @experience.geocode.map do |experience|
       {
@@ -25,6 +26,7 @@ class ExperiencesController < ApplicationController
 
   def create
     @experience = Experience.new(experience_params)
+    @experience.users << current_user
     if params[:experience][:picture].present?
     else
       @experience.picture = '/app/assets/images/default experience.jpg'
