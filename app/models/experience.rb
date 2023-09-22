@@ -1,6 +1,7 @@
 class Experience < ApplicationRecord
   belongs_to :user
   belongs_to :category
+  has_many_attached :photo
   has_many :bookings
   has_many_attached :photo
   geocoded_by :location
