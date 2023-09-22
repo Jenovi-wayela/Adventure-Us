@@ -1,8 +1,8 @@
 
 <%# <h1>Dashboard</h1> %>
 <div class="container">
-  <div class="mt-4 mb-4 ms-4">
-    <h3 class="fw-bold">Your Experiences</h3>
+  <div class="mt-4 mb-4 ms-4 custom-font">
+    <h3 class="fw-bold p-3">Your Experiences</h3>
   </div>
   <div class="grid-container">
     <% @listings.each do |listing| %>
@@ -37,7 +37,7 @@
       <div class="col-md-4 mb-2 mx-3">
         <div class="card shadow border border-warning-subtle p-3 mb-5 bg-white border-opacity-25 rounded-4">
           <div class="card-body">
-            <p class="card-subtitle mb-2 text-body-secondary"><%= booking.experience.title %> Status: <%= booking.status %></p>
+            <p class="card-subtitle mb-2 text-body-secondary"><h2 class="card-title fs-4 fw-bold"><%= booking.experience.title %></h2> Status: <div class="text-warning"><%= booking.status %></div></p>
           </div>
         </div>
       </div>
