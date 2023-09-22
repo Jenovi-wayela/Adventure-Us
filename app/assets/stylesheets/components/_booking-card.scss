@@ -1,14 +1,8 @@
-.category-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  padding: 30px;
-}
-
-.category-card {
-  background-color: aquamarine;
+.booking-card {
+  background-size: cover;
+  background-position: center;
   height: 180px;
-  display: block;
+  display: flex;
   justify-content: center;
   align-items: center;
   color: white;
@@ -17,8 +11,4 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-
-  a {
-    text-decoration: none;
-  }
 }
