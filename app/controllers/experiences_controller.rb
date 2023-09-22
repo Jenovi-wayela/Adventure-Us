@@ -18,7 +18,7 @@ class ExperiencesController < ApplicationController
     end
 
     if @experience.save
-      redirect_to @experience, notice: 'Experience was successfully created.'
+      redirect_to dashboard, notice: 'Experience was successfully created.'
     else
       render :new
     end
