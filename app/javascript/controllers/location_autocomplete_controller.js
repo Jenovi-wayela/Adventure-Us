@@ -14,6 +14,7 @@ export default class extends Controller {
       types: "country,region,place,postcode,locality,neighborhood,address"
     })
     this.geocoder.addTo(this.element)
+    console.log(this.locationTarget.value)
   }
 
   disconnect() {
