@@ -1,10 +1,24 @@
 
-<h1>ADVENTURE US</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/382177/pexels-photo-382177.jpeg?auto=compress&cs=tinysrgb&w=1600);">
+  <div class="container">
+    <h1><strong>adventure.us</strong></h1>
+    <p>ADVENTURE ENDS WHEN YOU'RE DEAD</p>
+  </div>
+</div>
 
-<%= form_tag(search_path, method: "get", class: "search-form") do %>
-  <%= text_field_tag :query, params[:query], placeholder: "Search by title/category" %>
-  <%= submit_tag "Search", class: "btn btn-outline-secondary" %>
-<% end %>
+<br>
+<br>
+<br>
+
+
+<div class="container">
+  <div class="d-flex justify-content-end col-md-12">
+    <%= form_tag(search_path, method: "get", class: "search-form") do %>
+      <%= text_field_tag :query, params[:query], placeholder: "Search by title/category" %>
+      <%= submit_tag "Search", class: "btn btn-outline-secondary" %>
+    <% end %>
+  </div>
+</div>
 
 <% if @results.present? %>
 <% @results.each do |result| %>

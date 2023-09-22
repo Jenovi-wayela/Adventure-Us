@@ -23,8 +23,13 @@ class ExperiencesController < ApplicationController
       @experience.image = '/app/assets/images/default experience.jpg'
     end
 
+<<<<<<< HEAD
+    if @experience.save
+      redirect_to dashboard, notice: 'Experience was successfully created.'
+=======
     if @experience.save!
       redirect_to dashboard_path, notice: 'Experience was successfully created.'
+>>>>>>> master
     else
       render :new
     end
