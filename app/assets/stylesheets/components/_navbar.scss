@@ -1,39 +1,68 @@
 
+
 .navbar-lewagon {
   justify-content: space-between;
   background: #F4B942;
+
+  .navbar-collapse {
+    flex-grow: 0;
+  }
+
+  .navbar-brand {
+    img {
+      width: 60px;
+      border-radius: 50%;
+    }
+  }
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
 
-.navbar-lewagon .navbar-brand img {
-  width: 60px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-}
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  $gutter-x: 1.5rem;
+  $gutter-y: 0;
 
-.container, .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
+  --bs-gutter-x: $gutter-x;
+  --bs-gutter-y: $gutter-y;
   width: 92%;
-  padding-right: calc(var(--bs-gutter-x) * .5);
-  padding-left: calc(var(--bs-gutter-x) * .5);
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
   margin-left: auto;
 }
+.navbar-lewagon .navbar-brand:hover img,
+.navbar-lewagon .nav-link:hover,
+.navbar-lewagon .avatar:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -webkit-transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -ms-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+.navbar-lewagon .navbar-brand img,
+.navbar-lewagon .nav-link,
+.navbar-lewagon .avatar {
+  -webkit-transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -ms-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
 h1 {
   font-family: inherit;
-  font-style: bold;
-  font-weight: 300%;
+  font-weight: bold;
   margin-top: -15px;
   margin-left: -688px;
   margin-bottom: -19px;
-}
-img {
-
 }

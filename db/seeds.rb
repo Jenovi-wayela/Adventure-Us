@@ -36,7 +36,7 @@ safari = Category.create!(name: "Safari", url: "https://images.pexels.com/photos
 arts_and_culture = Category.create!(name: "Arts and Culture", url: "https://images.pexels.com/photos/2372977/pexels-photo-2372977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
 tours = Category.create!(name: "Tours", url: "https://images.pexels.com/photos/17087507/pexels-photo-17087507/free-photo-of-tourists-with-a-tour-guide.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
 
-ex1 = Experience.create!(
+Experience.create!(
                    title: "Gourmet Dinner",
                    description: "Indulge in a delicious gourmet dinner experience.",
                    date: Date.today + 10,
