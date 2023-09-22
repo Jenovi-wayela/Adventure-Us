@@ -1,34 +1,45 @@
+
+<%# <h1>Dashboard</h1> %>
 <div class="container">
-    <div class="row justify-content-start">
-        <div class="dashboard-cards">
-            <%# <h1>Dashboard</h1> %>
-            <h3>Your Experiences</h3>
-
-              <% @listings.each do |listing| %>
-                  <div class= "d-flex justify-content-between">
-                      <div class= "experience-info">
-                        <div class="title-description">
-                        <h2> <%= listing.title %></h2>
-                        <p> Description: <%= listing.description %></p>
-                        <div class="card-trip-info">
-                          Date: <%= listing.date.strftime('%B %d, %Y') %>
-                          Location: <%= listing.location %>
-                          Capacity: <%= listing.capacity %>
-                          Price: R<%= listing.price %>
-                        </div>
-                      </div>
-                  </div>
-              <% end %>
-
-            <div class="booking-card">
-              <h3>Your Bookings</h3>  
-              <ul>
-                  <% @bookings.each do |booking| %>
-                      <li><%= booking.experience.title %> Status: <%= booking.status %></li>
-                  <% end %>
-              </ul>
+  <div class="mt-4 mb-4 ms-4 custom-font">
+    <h3 class="fw-bold p-3">Your Experiences</h3>
+  </div>
+  <div class="grid-container">
+    <% @listings.each do |listing| %>
+      <div class="col-md-4 mb-2 mx-3">
+        <div class="card shadow-lg border border-2  border-warning-subtle p-3 mb-5 bg-white border-opacity-25 rounded-4">
+          <div class="card-body text-wrap">
+            <h2 class="card-title fs-4 fw-bold"> <%= listing.title %></h2>
+            <p class="card-subtitle mb-2 text-body-secondary"> <%= listing.description %></p>
+              Date: <%= listing.date.strftime('%B %d, %Y') %>
+              <div class="text-start">
+                Location: <%= listing.location %>
+              </div>
+                <div class="text-start">
+                Capacity: <%= listing.capacity %>
+                </div>
+            <div class="text-end fw-bold">
+              Price: R<%= listing.price %>
             </div>
-
+          </div>
         </div>
-    </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="mt-4 mb-4 ms-4">
+    <h3 class="fw-bold">Your Bookings</h3>
+  </div>
+  <div class="grid-container">
+    <% @bookings.each do |booking| %>
+      <div class="col-md-4 mb-2 mx-3">
+        <div class="card shadow border border-warning-subtle p-3 mb-5 bg-white border-opacity-25 rounded-4">
+          <div class="card-body">
+            <p class="card-subtitle mb-2 text-body-secondary"><h2 class="card-title fs-4 fw-bold"><%= booking.experience.title %></h2> Status: <div class="text-warning"><%= booking.status %></div></p>
+          </div>
+        </div>
+      </div>
+  <% end %>
 </div>
